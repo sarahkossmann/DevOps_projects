@@ -31,7 +31,7 @@ def guess_game():
         if computer_number != user_number:
             print("You didn't guess the computer number.")
             attempts += -1
-            print(f"You have {attempts} attempt(s) left. Try again")
+            print(f"You have {attempts} attempt(s) left.")
             if attempts > 0:
                 continue
             elif attempts == 0:
@@ -46,7 +46,7 @@ def currency_roulette():
     value_number_usd = randint(1, 100)
     usd_in_cad = CurrencyRates().convert(base_cur="USD", dest_cur="CAD", amount=value_number_usd, date_obj=today)
     usd_in_cad = round(usd_in_cad, 1)
-    user_guess = float(input(f"Here is {value_number_usd} $. \nGuess how much this amount is in Canadian Dollars: "))
+    user_guess = float(input(f"Here is {value_number_usd} USD. \nGuess how much this amount is in Canadian Dollars (accuracy 1 decimal after the coma): "))
 
     if user_guess == usd_in_cad:
         print("You guessed right!")
