@@ -25,29 +25,28 @@ def memory_game():
                 print('Please enter only 3 numbers')
                 continue
 
-            flag=True
+            flag = True
             for elem in user_answer_split:
                 if not elem.isnumeric():
-                    flag=False
+                    flag = False
                     break
             if not flag:
                 print('Please enter only numbers')
                 break
 
             for i in range(len(sequence_of_numbers)):
-                sequence_of_numbers[i]=str(sequence_of_numbers[i])
-            if sequence_of_numbers==user_answer_split:
+                sequence_of_numbers[i] = str(sequence_of_numbers[i])
+            if sequence_of_numbers == user_answer_split:
                 print('Congrats! You won!')
                 exit()
             else:
-                attempts-=1
+                attempts -= 1
                 print(f"You have {attempts} attempt(s) left.")
 
         if attempts == 0:
-           print('Game over')
-           exit()
+            print('Game over')
+            exit()
 
-memory_game()
 
 def guess_game():
     attempts = 5
@@ -76,7 +75,8 @@ def currency_roulette():
     value_number_usd = randint(1, 100)
     usd_in_cad = CurrencyRates().convert(base_cur="USD", dest_cur="CAD", amount=value_number_usd, date_obj=today)
     usd_in_cad = round(usd_in_cad, 1)
-    user_guess = float(input(f"Here is {value_number_usd} USD. \nGuess how much this amount is in Canadian Dollars (accuracy 1 decimal after the coma): "))
+    user_guess = float(input(
+        f"Here is {value_number_usd} USD. \nGuess how much this amount is in Canadian Dollars (accuracy 1 decimal after the coma): "))
 
     if user_guess == usd_in_cad:
         print("You guessed right!")
