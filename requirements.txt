@@ -1,5 +1,7 @@
 forex-python
 random
 requests
-
+flask
+sys
+PIL
 

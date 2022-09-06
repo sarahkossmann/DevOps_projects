@@ -1,12 +1,12 @@
-# def divide(x, y):
-#     try:
-#         print(x/y)
-#     except ZeroDivisionError:
-#         print("Don't divide by zero")
-#     except TypeError:
-#         print("Please use numeric characters only!")
-#     except BaseException as e:
-#         print("ERROR! : ", e.args)
+def divide1(x, y):
+    try:
+        print(x/y)
+    except ZeroDivisionError:
+        print("Don't divide by zero")
+    except TypeError:
+        print("Please use numeric characters only!")
+    except BaseException as e:
+        print("ERROR! : ", e.args)
 
 def divide(x, y):
     if x == 0 or y == 0:
