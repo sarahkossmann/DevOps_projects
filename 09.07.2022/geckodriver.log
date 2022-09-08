@@ -1,0 +1,50 @@
+1662648109298	geckodriver	INFO	Listening on 127.0.0.1:54121
+1662648109313	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "54122" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/r6/1vq1r68933g9dv5d20by5xp80000gn/T/rust_mozprofileMZz6qy"
+2022-09-08 17:41:50.045 plugin-container[96597:1720201] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-08 17:41:50.045 plugin-container[96597:1720201] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1662648110058	Marionette	INFO	Marionette enabled
+2022-09-08 17:41:50.091 plugin-container[96597:1720201] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-08 17:41:50.091 plugin-container[96597:1720201] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-08 17:41:50.092 plugin-container[96597:1720203] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-08 17:41:50.092 plugin-container[96597:1720203] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1662648110101	Marionette	INFO	Listening on port 54125
+WebDriver BiDi listening on ws://localhost:54122
+Read port: 54125
+1662648110485	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/r6/1vq1r68933g9dv5d20by5xp80000gn/T/rust_mozprofileMZz6qy/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54122/devtools/browser/acf5c708-5c7d-4ceb-9abd-3b4fe9ea3ec7
+2022-09-08 14:41:54.501 plugin-container[96614:1720481] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-08 14:41:54.502 plugin-container[96614:1720481] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-08 14:41:54.507 plugin-container[96614:1720481] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-08 14:41:54.507 plugin-container[96614:1720481] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-08 14:41:54.507 plugin-container[96614:1720496] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-08 14:41:54.508 plugin-container[96614:1720496] nil host used in call to allowsAnyHTTPSCertificateForHost:
+JavaScript error: https://gum.criteo.com/sync?c=72&r=2&j=TRC.getRTUS, line 2: SyntaxError: expected expression, got ')'
+JavaScript error: https://gum.criteo.com/sync?c=72&r=2&j=TRC.getRTUS, line 2: SyntaxError: expected expression, got ')'
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.ynet.co.il."
+JavaScript error: https://gum.criteo.com/sync?c=72&r=2&j=TRC.getRTUS, line 2: SyntaxError: expected expression, got ')'
+JavaScript warning: https://pagead2.googlesyndication.com/bg/JRDtgcUl_7OUjJ4QO8bVbwNuRTRqDUxuSBYCwiPHS6U.js line 2 > eval line 5678 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1662648134776	Marionette	INFO	Stopped listening on port 54125
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
