@@ -48,3 +48,27 @@ JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch res
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
 1662648134776	Marionette	INFO	Stopped listening on port 54125
 console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1663506717640	geckodriver	INFO	Listening on 127.0.0.1:50846
+1663506718090	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "50847" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/r6/1vq1r68933g9dv5d20by5xp80000gn/T/rust_mozprofileSKwgY6"
+2022-09-18 16:11:58.945 plugin-container[4244:123807] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-18 16:11:58.946 plugin-container[4244:123807] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1663506718989	Marionette	INFO	Marionette enabled
+1663506719036	Marionette	INFO	Listening on port 50855
+WebDriver BiDi listening on ws://localhost:50847
+2022-09-18 16:11:59.045 plugin-container[4244:123807] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-18 16:11:59.045 plugin-container[4244:123807] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-18 16:11:59.045 plugin-container[4244:123812] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-18 16:11:59.045 plugin-container[4244:123812] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 50855
+1663506719419	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/r6/1vq1r68933g9dv5d20by5xp80000gn/T/rust_mozprofileSKwgY6/search.json.mozlz4", (void 0)))
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+DevTools listening on ws://localhost:50847/devtools/browser/185ef93a-828f-477e-97eb-88271d17ec6a
+1663506730880	Marionette	INFO	Stopped listening on port 50855
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
