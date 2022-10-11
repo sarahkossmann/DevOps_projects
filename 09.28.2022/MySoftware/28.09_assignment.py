@@ -1,6 +1,5 @@
-
 def welcome():
-    print("new screen")
+    print("new screen/shalom")
 
 def click_method():
     print("CLICK")
