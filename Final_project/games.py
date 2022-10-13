@@ -60,12 +60,17 @@ def guess_game():
             continue
         attempts = 7 - difficulty
         computer_number = str(randint(1, 100))
+        print(computer_number)
+        interval = 10 - difficulty
+        print(interval)
 
         while attempts > 0:
             user_number = input("Guess the number the computer is thinking about. Choose a number between 1 and 100: ")
             if not user_number.isnumeric():
                 print("Error. You should enter a numeric character")
-            elif computer_number != user_number:
+            computer_number = int(computer_number)
+            user_number = int(user_number)
+            if user_number not in range(computer_number - interval, computer_number + interval):
                 print("You didn't guess the computer number.")
                 attempts += -1
                 print(f"You have {attempts} attempt(s) left.")
@@ -87,13 +92,13 @@ def currency_roulette():
         today = date.today()
         value_number_usd = randint(1, 100)
         usd_in_cad = CurrencyRates().convert(base_cur="USD", dest_cur="CAD", amount=value_number_usd, date_obj=today)
-        usd_in_cad = round(usd_in_cad, 1)
-        user_guess = float(input(
+        usd_in_cad = int(usd_in_cad)
+        user_guess = int(input(
             f"Here is {value_number_usd} USD. \nGuess how much this amount is in Canadian Dollars (accuracy 1 decimal after the coma): "))
-        interval = 6 - difficulty
+        interval = 10 - difficulty
         if user_guess in range(usd_in_cad - interval, usd_in_cad + interval):
             print("You guessed right!")
+            exit(0)
         else:
             print(f"Game over. The answer was {usd_in_cad}")
-
-currency_roulette()
+            exit(0)
