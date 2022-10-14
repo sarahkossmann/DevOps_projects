@@ -1,4 +1,4 @@
-from Live import *
+from live import *
 
 welcome("Sarah")
 load_game()

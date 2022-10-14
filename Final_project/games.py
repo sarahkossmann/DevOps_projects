@@ -3,6 +3,7 @@ from time import sleep
 from forex_python.converter import CurrencyRates
 from datetime import date
 
+difficulty_list = []
 
 def memory_game():
     while True:
@@ -14,20 +15,19 @@ def memory_game():
         print("A sequence of numbers will appear for one second. Remember them.")
         sleep(2)
         sequence_of_numbers = [(randint(1, 100)) for i in range(difficulty)]
+        sleep(2)
+        print(sequence_of_numbers, end="")
+        sleep(1)
+        print(" " * len(sequence_of_numbers), end="\r")
+        sleep(1)
 
         while True:
             while attempts > 0:
-                sleep(2)
-                print(sequence_of_numbers, end="")
-                sleep(1)
-                print(" " * len(sequence_of_numbers), end="\r")
-                sleep(1)
-
-                user_answer_number = str(input("Guess the numbers you just saw (in the right order). \nProvide list of numbers separated by comma, e.g. 1,2,3. \nType the sequence here: "))
+                user_answer_number = str(input("Guess the number(s) you just saw (in the right order). \nProvide list of numbers separated by comma, e.g. 1,2,3. \nType the sequence here: "))
                 user_answer_split = user_answer_number.split(',')
 
-                if len(user_answer_split) != 3:
-                    print('Please enter only 3 numbers')
+                if len(user_answer_split) != difficulty:
+                    print(f'Please enter {difficulty} numbers')
                     continue
 
                 flag = True
@@ -43,7 +43,8 @@ def memory_game():
                     sequence_of_numbers[i] = str(sequence_of_numbers[i])
                 if sequence_of_numbers == user_answer_split:
                     print('Congrats! You won!')
-                    exit()
+                    difficulty_list.append(difficulty)
+                    return
                 else:
                     attempts -= 1
                     print(f"You have {attempts} attempt(s) left.")
@@ -62,7 +63,6 @@ def guess_game():
         computer_number = str(randint(1, 100))
         print(computer_number)
         interval = 10 - difficulty
-        print(interval)
 
         while attempts > 0:
             user_number = input("Guess the number the computer is thinking about. Choose a number between 1 and 100: ")
@@ -81,7 +81,8 @@ def guess_game():
                     exit()
             else:
                 print("You guessed right!")
-                exit()
+                difficulty_list.append(difficulty)
+                return
 
 def currency_roulette():
     while True:
@@ -93,12 +94,15 @@ def currency_roulette():
         value_number_usd = randint(1, 100)
         usd_in_cad = CurrencyRates().convert(base_cur="USD", dest_cur="CAD", amount=value_number_usd, date_obj=today)
         usd_in_cad = int(usd_in_cad)
+        print(usd_in_cad)
         user_guess = int(input(
-            f"Here is {value_number_usd} USD. \nGuess how much this amount is in Canadian Dollars (accuracy 1 decimal after the coma): "))
+            f"Here is {value_number_usd} USD. \nGuess how much this amount is in Canadian Dollars: "))
         interval = 10 - difficulty
         if user_guess in range(usd_in_cad - interval, usd_in_cad + interval):
             print("You guessed right!")
-            exit(0)
+            difficulty_list.append(difficulty)
+            return
         else:
             print(f"Game over. The answer was {usd_in_cad}")
             exit(0)
+currency_roulette()
