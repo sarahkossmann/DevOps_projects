@@ -21,7 +21,6 @@ def add_score_to_file():
                 list_of_numbers.append(numbers)
                 total = sum(list_of_numbers)
     with open('scores.txt', 'a+') as f:
-        print(total)
         f.write("\n")
         f.write("Total score: ")
         f.write(str(total))
