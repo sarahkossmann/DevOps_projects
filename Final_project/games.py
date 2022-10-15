@@ -94,7 +94,6 @@ def currency_roulette():
         value_number_usd = randint(1, 100)
         usd_in_cad = CurrencyRates().convert(base_cur="USD", dest_cur="CAD", amount=value_number_usd, date_obj=today)
         usd_in_cad = int(usd_in_cad)
-        print(usd_in_cad)
         user_guess = int(input(
             f"Here is {value_number_usd} USD. \nGuess how much this amount is in Canadian Dollars: "))
         interval = 10 - difficulty
@@ -105,4 +104,3 @@ def currency_roulette():
         else:
             print(f"Game over. The answer was {usd_in_cad}")
             exit(0)
-currency_roulette()

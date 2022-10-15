@@ -1,4 +1,5 @@
 from games import *
+from scores import add_score_to_file, delete_first_two_rows
 
 
 def welcome(name):
@@ -19,8 +20,14 @@ def load_game():
             continue
         if game_chosen == 1:
             memory_game()
+            add_score_to_file()
+            return
         elif game_chosen == 2:
             guess_game()
+            add_score_to_file()
+            return
         elif game_chosen == 3:
             currency_roulette()
+            add_score_to_file()
+            return
 
