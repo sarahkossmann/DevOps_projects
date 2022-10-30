@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: superset-pod
+spec: 
+  containers:
+  - image: amancevice/superset
+    name: superset
+    ports:
+    - containerPort: 8088
