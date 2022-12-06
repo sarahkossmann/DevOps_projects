@@ -3,7 +3,10 @@ import os
 
 def get_points():
     for diff in difficulty_list:
-        points_won = (diff * 3) + 5
+        if diff == 0:
+            points_won = 0
+        else:
+            points_won = (diff * 3) + 5
         return points_won
 
 def add_score_to_file():

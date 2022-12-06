@@ -51,7 +51,8 @@ def memory_game():
 
             if attempts == 0:
                 print('Game over')
-                exit()
+                difficulty_list.append(0)
+                return
 
 def guess_game():
     while True:
