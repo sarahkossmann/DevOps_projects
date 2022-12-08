@@ -1,7 +1,17 @@
-from games import *
+from Final_project.games.currency_roulette import *
+from Final_project.games.memory_game import *
+from Final_project.games.guess_game import *
 import os
 
 def get_points():
+    global difficulty_list
+    if difficulty_list_currency_roulette:
+        difficulty_list = difficulty_list_currency_roulette
+    elif difficulty_list_memory_game:
+        difficulty_list = difficulty_list_memory_game
+    elif difficulty_list_guess_game:
+        difficulty_list = difficulty_list_guess_game
+
     for diff in difficulty_list:
         if diff == 0:
             points_won = 0
