@@ -5,7 +5,11 @@ difficulty_list_memory_game = []
 
 def memory_game():
     while True:
-        difficulty = int(input("Choose the level of difficulty between 1 to 5: "))
+        try:
+            difficulty = int(input("Choose the level of difficulty between 1 to 5: "))
+        except ValueError:
+            print("ERROR! Not an number! Please enter only numeric characters.")
+            continue
         if difficulty > 5:
             print("Please choose a number not higher than 5")
             continue
