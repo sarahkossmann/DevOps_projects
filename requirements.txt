@@ -8,4 +8,4 @@ selenium~=4.4.3
 
 
 Pillow~=9.2.0
-boto3~=1.26.5
+boto3==1.26.27
