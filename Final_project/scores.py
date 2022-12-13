@@ -1,6 +1,6 @@
-from Final_project.games.currency_roulette import *
-from Final_project.games.memory_game import *
-from Final_project.games.guess_game import *
+from games.currency_roulette import *
+from games.memory_game import *
+from games.guess_game import *
 import os
 
 def get_points():

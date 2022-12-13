@@ -1,6 +1,6 @@
-from Final_project.games.currency_roulette import currency_roulette
-from Final_project.games.memory_game import memory_game
-from Final_project.games.guess_game import guess_game
+from games.currency_roulette import currency_roulette
+from games.memory_game import memory_game
+from games.guess_game import guess_game
 from scores import add_score_to_file
 
 
