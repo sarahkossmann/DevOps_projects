@@ -1,37 +1,26 @@
-import time
+import unittest
 from selenium import webdriver
-from selenium.webdriver import Keys
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+class Test(unittest.TestCase):
+    def setUp(self):
+        self.browser = webdriver.Chrome("/Users/sarahkossmann/Downloads/chromedriver")
+        self.browser.get("http://127.0.0.1:5000/")
+    def test1(self):
+        browser = self.browser
+        WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.ID, "total-score")))
+        total_score_flask = browser.find_element(By.ID, 'total-score').text
+        total_score_flask = total_score_flask.split(": ")
+        score = total_score_flask[1]
+        score = int(score)
+        self.assertGreaterEqual(score, 0)
+        self.assertLessEqual(score, 1000)
 
-# opts = Options()
-# opts.add_experimental_option("detach", False)
-chrome_driver = webdriver.Chrome("/Users/sarahkossmann/Downloads/chromedriver")
+    def tearDown(self):
+        self.browser.quit()
 
-def test_scores_service():
-    chrome_driver.get("http://127.0.0.1:5000/")
-    WebDriverWait(chrome_driver, 10).until(EC.presence_of_element_located((By.ID, "total-score")))
-    total_score_flask = chrome_driver.find_element(By.ID, 'total-score').text
-    total_score_flask = total_score_flask.split(": ")
-    score = total_score_flask[1]
-    score = int(score)
-    if score in range(0, 1000):
-        return True
-    else:
-        return False
 
-def main_function():
-    test_scores_service()
-    if test_scores_service():
-        exit(0)
-    else:
-        exit(1)
-
-def tear_down():
-    chrome_driver.quit()
-
-main_function()
-
+if __name__ == "__main__":
+    unittest.main()
