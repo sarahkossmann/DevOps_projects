@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-from main_game import *
 
 app = Flask(__name__)
 
@@ -15,4 +14,4 @@ def score_server():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0')
