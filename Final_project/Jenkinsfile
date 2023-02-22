@@ -29,5 +29,10 @@ pipeline {
                 sh 'docker-compose -f /Users/sarahkossmann/Desktop/Pycharm/Devops_projects/Final_project/docker-compose.yml stop'
             }
         }
+        stage('Push image to Dockerhub') {
+            steps {
+                sh 'docker-compose -f /Users/sarahkossmann/Desktop/Pycharm/Devops_projects/Final_project/docker-compose.yml push'
+            }
+        }
     }
 }
